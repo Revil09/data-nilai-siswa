@@ -1,15 +1,11 @@
-# ======================
-# DATA LOGIN
-# ======================
+#data login
 username = "admin"
 password = "123"
 
 
 data_siswa = []
 
-# ======================
-# FUNCTION LOGIN
-# ======================
+#fungsui login
 
 def login():
     while True:
@@ -25,9 +21,7 @@ def login():
         else:
             print("Login gagal! Coba lagi.\n")
 
-# ======================
-# TAMBAH DATA SISWA
-# ======================
+#tambah data siswa
 def tambah_siswa():
     nama = input("Nama siswa : ")
     kelas = input("kelas : ")
@@ -46,9 +40,7 @@ def tambah_siswa():
     data_siswa.append(siswa)
     print("Data berhasil ditambahkan!")
 
-# ======================
-# LIHAT DATA
-# ======================
+#lihat data siswa
 def lihat_siswa():
     if len(data_siswa) == 0:
         print("Belum ada data siswa")
@@ -57,9 +49,7 @@ def lihat_siswa():
         for i, siswa in enumerate(data_siswa):
             print(i+1, siswa["nama"], "-", siswa["kelas"], "-", siswa["nilai"])
 
-# ======================
-# EDIT NILAI
-# ======================
+#edit data siswa
 def edit_siswa():
     lihat_siswa()
     
@@ -79,9 +69,7 @@ def edit_siswa():
     else:
         print("Nomor tidak ada")
 
-# ======================
-# HAPUS DATA
-# ======================
+#hapus data siswa
 def hapus_siswa():
     lihat_siswa()
     
@@ -97,9 +85,7 @@ def hapus_siswa():
     else:
         print("Nomor tidak ditemukan")
 
-# ======================
-# MENU
-# ======================
+#menu utama
 def menu():
     while True:
         print("\n=== MENU ===")
@@ -132,7 +118,5 @@ def menu():
         else:
             print("Menu tidak tersedia")
 
-# ======================
-# PROGRAM DIMULAI
-# ======================
+#jalankan program
 login()
